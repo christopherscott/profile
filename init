@@ -1,3 +1,9 @@
+load_comps(){
+  for SCRIPT in "$1"*.sh; do
+    source "${SCRIPT}"
+  done
+}
+
 load_conf() {
   for CONF in "$1/"*.conf; do
     source "${CONF}"
@@ -5,6 +11,7 @@ load_conf() {
 }
 
 PROFILE_PATH="${HOME}/.profile.d"
+COMPLETION_PATH="${PROFILE_PATH}/completion"
 PLATFORM_PATH="${PROFILE_PATH}/`uname`"
 
 # load main confs
