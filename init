@@ -23,7 +23,5 @@ load_conf "${PROFILE_PATH}"
 # load platform-specific confs prn
 [ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
 
-# Although I love the idea of open-sourcing 
-# your profile confs, there are some company-specific, 
-# and personal things the world doesn't need to see ;)
+# load private confs
 source "${HOME}/.private.conf"
