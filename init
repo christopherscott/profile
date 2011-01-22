@@ -24,4 +24,4 @@ load_conf "${PROFILE_PATH}"
 [ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
 
 # load private confs
-[ -e "${HOME}/.private.conf] source "${HOME}/.private.conf"
+[ -e "${HOME}/.private.conf" ] && source "${HOME}/.private.conf"
