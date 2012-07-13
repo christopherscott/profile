@@ -11,17 +11,11 @@ load_conf(){
 }
 
 PROFILE_PATH="${HOME}/.profile.d"
-COMPLETION_PATH="${PROFILE_PATH}/completion"
-PLATFORM_PATH="${PROFILE_PATH}/`uname`"
-
 # load completion scripts
-load_comps "${COMPLETION_PATH}"
-
+load_comps "${PROFILE_PATH}"
 # load main confs
 load_conf "${PROFILE_PATH}"
 
-# load platform-specific confs prn
-[ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
-
-# load private confs
-[ -e "${HOME}/.private.conf" ] && source "${HOME}/.private.conf"
+# PLATFORM_PATH="${PROFILE_PATH}/`uname`"
+# # load platform-specific confs prn
+# [ -e "${PLATFORM_PATH}" ] && load_conf "${PLATFORM_PATH}"
